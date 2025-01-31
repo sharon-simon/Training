@@ -1,0 +1,213 @@
+Strings
+
+
+
+PROGRAM 1:
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="Hello";
+		String str2="World";
+		System.out.println("print the statement: "+str1+ " "+str2);
+	}
+}
+
+
+
+PROGRAM 2:
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="Hello";
+		int length=str1.length();
+		System.out.println("print the statement: "+length);
+	}
+}
+
+
+PROGRAM 3:
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="Hello";
+		char ch=str1.charAt(3);
+		System.out.println("print the statement: "+ch);
+	}
+}
+
+
+
+
+
+PRORAM 4:
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO";
+
+		System.out.println("print the statement: "+str1.equals(str2));
+	}
+}
+
+
+PROGRAM  5:
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO";
+
+		System.out.println("print the statement: "+str1.equalsIgnoreCase(str2));
+	}
+}
+
+
+PROGRAM 5:
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO";
+
+		System.out.println("print the statement: "+str1.toUpperCase());
+		System.out.println("print the statement: "+str2.toLowerCase());
+	}
+}
+
+
+
+
+PROGRAM 6:
+
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO";
+
+		System.out.println("print the statement: "+str1.indexOf('o'));
+		System.out.println("print the statement: "+str2.toLowerCase());
+	}
+}
+
+
+
+PROGRAM 7:
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO friends";
+
+		System.out.println("print the statement: "+str1.indexOf('o'));
+		System.out.println("print the statement: "+str2.endsWith("friends"));
+	}
+}
+
+
+PROGRAM 8:
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO friends";
+
+		System.out.println("print the statement: "+str1.replace('o','e'));
+
+	}
+}
+
+
+
+PROGRAM 9:
+
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO friends";
+
+		System.out.println("print the statement: "+str1.isEmpty());
+
+	}
+}
+
+
+PROGRAM 10:
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String str2="HELLO friends";
+
+		System.out.println("print the statement: "+str1.trim());
+
+	}
+}
+
+
+PROGRAM 11:reverse
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		String reversed="";
+        for(int i=str1.length()-1;i>=0;i--)
+        {
+            reversed+=str1.charAt(i);
+        }
+		System.out.println("print the statement: "+reversed);
+
+	}
+}
+
+
+
+PROGRAM 12":
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String str1="hello";
+		char ch='a';
+		int count=0;
+		for (int i=0;i<str1.length();i++)
+		{
+		    if(str1.charAt(i)==ch)
+		    count++;
+		}
+		System.out.println("print the statement: "+count);
+
+	}
+}
+
