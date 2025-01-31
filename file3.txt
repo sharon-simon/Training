@@ -1,0 +1,254 @@
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter num");
+   int n=sc.nextInt();
+   int a[]=new int[n];
+   int temp;
+   System.out.println("enter the elements");
+   for(int i=0;i<n;i++){
+       a[i]=sc.nextInt();
+       
+   }
+  for(int i=0;i<n;i++){
+     for(int j=i+1;j<a.length;j++){
+         if(a[i]>a[j]){
+             temp=a[i];
+             a[i]=a[j];
+             a[j]=temp;
+         }
+     }
+  }
+  System.out.println("ascending order");
+  for(int i=0;i<n;i++)
+  {
+      System.out.println(a[i]);
+     
+  }
+}
+
+  }
+
+
+
+
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node prev;
+    Node(int data){
+        this.data = data;
+        this.next =null;
+        this.prev = null;
+    }
+}
+class DLL{
+    Node head,tail;
+    public void insertAtBeg(int data){
+        Node newNode = new Node(data);
+        if(head==null){
+            head = tail=newNode;
+        }
+        else{
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+    }
+    public void insertAtEnd(int data){
+        Node newNode = new Node(data);
+        if(tail==null){
+            head=tail=newNode;
+        }
+        else{
+            tail.next=newNode;
+            newNode.prev=tail;
+            tail=newNode;
+        }
+    }
+    public void display(){
+        Node temp = head;
+        if(temp==null){
+            System.out.println("Empty");
+            return;
+        }
+        while(temp!=null){
+            System.out.print(temp.data);
+            if(temp.next!=null){
+                System.out.print(" <--> ");
+            }
+             temp = temp.next;
+           
+        }
+        System.out.println();
+    }
+    public void deleteAtBeg(){
+        if(head==null){
+            System.out.println("Empty");
+            return;
+        }
+        if(head==tail){
+            head=tail=null;
+        }
+        else{
+            head=head.next;
+            head.prev = null;
+        }
+    }
+    public void deleteAtEnd(){
+       
+    }
+}
+public class Main
+{
+public static void main(String[] args) {
+DLL doubly = new DLL();
+doubly.insertAtBeg(100);
+doubly.insertAtBeg(200);
+doubly.insertAtBeg(300);
+doubly.insertAtEnd(400);
+doubly.deleteAtBeg();
+doubly.display();
+}
+}
+
+
+
+
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x<0) return false;
+        int rem;
+        int temp=x;
+        long ans=0;
+        while(x!=0)
+        {
+            rem=x%10;
+            ans=(ans*10)+rem;
+            x=x/10;
+
+        }
+        if(temp==ans){
+            return true;
+        }
+        else{
+            return false;
+        }
+        }
+        }
+       
+   
+
+
+
+
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter num");
+   int n=sc.nextInt();
+   int a[]=new int[n];
+   
+   int temp;
+   System.out.println("enter the elements");
+   for(int i=0;i<n;i++){
+       a[i]=sc.nextInt();
+       
+   }
+  for(int i=0;i<n;i++){
+     for(int j=i+1;j<a.length;j++){
+         if(a[i]>a[j]){
+             temp=a[i];
+             a[i]=a[j];
+             
+             a[j]=temp;
+             
+             
+             
+         }
+     }
+  }
+  System.out.println("sec largest num" +a[n-2]);
+}
+}
+
+
+
+
+
+
+
+
+// stack
+class Stack{
+    int a[] = new int[7];
+    int top =-1;
+   
+ // push ()
+ 
+ public void push(int data){
+     if(top==a.length-1){
+         System.out.println("Stack is full");
+     }
+     else{
+         top++;
+         a[top]=data;
+     }
+ }
+   
+ // pop()
+ 
+ public void pop(){
+     if(top==-1){
+         System.out.println("Stack is empty");
+     }
+     else{
+         top--;
+     }
+ }
+   
+ // peek()
+ 
+ public void peek(){
+     if(top==-1){
+         System.out.println("Stack is empty");
+     }
+     else{
+         System.out.println("Top of the element:" + a[top]);
+     }
+ }
+ 
+ // display()
+ 
+ public void display(){
+     for(int i=top; i>=0; i--){
+         System.out.println("Display the elements:" +a[i]);
+     }
+ }
+}
+
+// main function
+
+public class Main{
+    public static void main(String[] args){
+     Stack s = new Stack();
+     s.push(10);
+     s.push(20);
+     s.push(30);
+     s.push(40);
+     s.push(50);
+     s.push(70);
+     s.push(90);
+     
+     s.pop();
+     s.peek();
+     s.display();
+       
+    }
+}
